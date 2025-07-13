@@ -1,8 +1,15 @@
-export default function HomePage(){
+import clsx from "clsx";
+
+export default function HomePage() {
   return (
     <div>
-      <h1>Welcome to the Home Page</h1>
-      <p>This is a simple Next.js application.</p>
+      <h1
+        className={clsx("text-3xl", "font-bold", "hover:bg-blue-300", {
+          "text-blog": false,
+        })}
+      >
+        Texto no meu h1
+      </h1>
     </div>
   );
 }
