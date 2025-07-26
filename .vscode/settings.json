@@ -17,6 +17,10 @@
     "typescript": "clear ; npx tsx"
   },
 
+  "tailwindCSS.experimental.classRegex": [
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
