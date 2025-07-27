@@ -2,7 +2,7 @@ import { PostCoverImage } from "../PostCoverImage";
 import { PostDescription } from "../PostDescription";
 
 export function PostFeatured() {
-  const slug = 'qualquer';
+  const slug = "qualquer";
   const postLink = `/post/${slug}`;
 
   return (
@@ -20,7 +20,7 @@ export function PostFeatured() {
         }}
       ></PostCoverImage>
       <PostDescription
-        date="27/07/2025 10:00"
+        date="2025-07-27T10:00:00"
         heading="Rerum, vel ex? Impedit ullam harum blanditiis"
         headingUrl={postLink}
       >
