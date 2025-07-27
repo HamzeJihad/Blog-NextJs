@@ -7,6 +7,7 @@ import clsx from "clsx";
 import Link from "next/link";
 import { Suspense } from "react";
 import Image from "next/image";
+import { PostHeading } from "@/components/PostHeading";
 
 
 export default async function HomePage() {
@@ -27,11 +28,9 @@ export default async function HomePage() {
         </Link>
         <div className= 'flex flex-col gap-2 sm:justify-center'>
           <time className="text-slate-600 text-sm/tight" dateTime="2025-07-27">27/07/2025 10:00</time>
-          <h1 className="text-2xl/tight font-extrabold sm:text-4xl">
-            <Link href="#">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </Link>
-          </h1>
+          <PostHeading as='h1' url='#'>
+            Rerum, vel ex? Impedit ullam harum blanditiis
+          </PostHeading>
           <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. In velit
           dolorem est dolor porro, doloribus neque, quidem mollitia doloremque,
