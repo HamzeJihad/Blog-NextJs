@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import React from "react";
+import { Container } from "@/components/Container";
+import { Header } from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "The blog - Este é um blog com Next.js",
-  description: "Descrição da página",
+  title: {
+    default: 'The blog',
+    template: '%s | The Blog',
+  },  description: "Descrição da página",
 };
-
 
 export default function RootLayout({
   children,
@@ -15,9 +18,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <body>
+        <Container>
+          <Header />
 
-      <body>{children}</body>
+          {children}
 
+          <footer>
+            <p className="text-6xl font-bold text-center py-8">Footer</p>
+          </footer>
+        </Container>
+      </body>
     </html>
   );
 }
