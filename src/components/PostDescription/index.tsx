@@ -1,5 +1,6 @@
 import { formatDatetime, formatDistanceToNow } from "@/utils/format-datetime";
 import { PostHeading } from "../PostHeading";
+import { PostDate } from "../PostDate";
 
 type PostDescriptionProps = {
   date: string;
@@ -16,14 +17,7 @@ export function PostDescription({
 }: PostDescriptionProps) {
   return (
     <div className="flex flex-col gap-2 sm:justify-center">
-      <time
-        className="text-slate-600 text-sm/tight"
-        dateTime={date}
-        title={formatDistanceToNow(date)}
-      >
-        {formatDatetime(date)}
-        
-      </time>
+      <PostDate dateTime={date}></PostDate>
 
       <PostHeading Tag="h2" url={headingUrl}>
         {heading}
