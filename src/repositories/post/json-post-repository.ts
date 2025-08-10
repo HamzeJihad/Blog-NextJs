@@ -45,7 +45,6 @@ export class JsonPostRepository implements PostRepository {
   }
 
   async findBySlug(slug: string): Promise<PostModel | null> {
-
     const posts = await this.findAllPublic();
     const post = posts.find((post) => post.slug === slug);
     if (!post) {
